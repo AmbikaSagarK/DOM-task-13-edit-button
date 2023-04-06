@@ -1,0 +1,62 @@
+<html>
+  <head>
+   
+  </meta>
+  <style>
+    .container {
+  padding: 16px;
+}
+    form {
+      background-color:orange;
+      font-size: 20px;
+      color: greenyellow;
+      text-align: center;
+      
+    }
+    input{
+      font-size: 30px;
+      color: yellow;
+      width: 1000px;
+    }
+  </style>
+
+  </head>
+  <body>
+    <form action="a" onsubmit="onsignup(event)">
+      <div class="elem-group">
+      <label>
+        Book A Appointment
+      </label>
+      <meta>
+      <div class="elem-group">
+        <label> Name </label>
+        <br>
+        <input type="text" name="visitor_name" required>    
+        <br>
+        <label> email </label>
+        <br>
+        <input type="email" name="visitor_email" required>
+        <br>
+        <label>phone </label>
+        <br>
+        <input type="tel" name="visitor_phone" required>
+        <br>
+        <label>password </label>
+        <br>
+        <input type="password" name="password" required>
+        <br>
+       <button> Submit </button>
+      <li>
+        visitor_name + visitor_email + visitor_phone
+        <button type="submit">Delete</button>
+      </li>
+    </form>
+    <script>
+      function onsubmit(event){
+        event.preventdefault();
+        console.log(event.target.name.value)
+      }
+    </script>
+  </body>
+  
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta>
+  </meta>
+  <style>
+    form {
+      background-color:orange;
+      font-size: 20px;
+      color: blue;
+    }
+    input{
+      font-family: blue;
+    }
+  </style>
+
+  </head>
+  <body>
+    <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="visitor_name" placeholder="Ambika" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <br>
+      
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input type="email" id="email" name="visitor_email" placeholder="kambu1992@gmail.com" required>
+      </div>
+      <br>
+      
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="8123364520" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <br>
+      
+       <button type="submit">Submit</button>
+      <li>
+        "Ambika + kambu1992@gmail.com + 8123364520"
+        <button type="submit">Delete</button>
+      </li>
+    </form>
+  </body>
+  
+</html>
+
