@@ -1,0 +1,111 @@
+<html>
+  <head>
+   
+  </meta>
+  <style>
+    .container {
+  padding: 16px;
+}
+    form {
+      background-color:orange;
+      font-size: 20px;
+      color: greenyellow;
+      text-align: center;
+      
+    }
+    input{
+      font-size: 30px;
+      color: yellow;
+      width: 1000px;
+    }
+  </style>
+
+  </head>
+  <body>
+    <form name="RegForm" method="post" id="users" onSubmit="return doValidate()" onDe>
+      <div class="elem-group">
+      <label>
+        Book A Appointment
+      </label>
+      <meta>
+      <div class="elem-group">
+        <label> Name </label>
+        <br>
+        <input type="text" name="visitor_name" required>    
+        <br>
+        <label> email </label>
+        <br>
+        <input type="email" name="visitor_email" required>
+        <br>
+        <label>phone </label>
+        <br>
+        <input type="tel" name="visitor_phone" required>
+        <br>
+       <button onclick=""> Submit </button>
+      <li>
+        <button type="Delete">Delete</button>
+        <button type="Edit">Edit</button>
+      </li>
+    </form>
+    <script>
+      function doValidate()
+    {
+   var name =
+        document.forms.RegForm.Name.value;
+        localStorage.Name.value(obj.Name)
+    var email =
+        document.forms.RegForm.email.value;
+        localStorage.EMail.value(obj.email)
+    var phone =
+        document.forms.RegForm.phoneNumber.value;
+        localStorage.phoneNumber.value(obj.phoneNumber)
+    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+    var regPhone=/^\d{10}$/;                                        // Javascript reGex for Phone Number validation.
+    var regName = /\d+$/g;   
+
+    if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly.");
+        name.focus();
+        return false;
+    }
+  
+    if (address == "") {
+        window.alert("Please enter your address.");
+        address.focus();
+        return false;
+    }
+      
+    if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+    const deleteButton = document.creteElement('input')
+    deleteButton.type = 'button'
+    deleteButton.value = 'delete'
+    deleteButton.onClick = () => {
+      localStorage.removeItem(obj.email)
+      parentElem.removeChild(ChildElem)
+
+    }
+    const editButton = document.creteElement('input')
+    editButton.type = 'button'
+    editButton.value = 'edit'
+    editButton.onClick = () => {
+      localStorage.removeItem(obj.email)
+      parentElem.removeChild(ChildElem)
+      document.getElementById('usernameInputTag').value.obj.name
+      document.getElementById('emailInputTag').value.obj.email
+      document.getElementById('phoneNumberInputTag').value.obj.phoneNumber
+      
+    }
+    childElem.appendChild(deleteButton)
+    childElem.appendChild(editButton)
+    parentElem.appendChild(childElem)
+
+}
+    </script>
+  </body>
+  
+</html>
